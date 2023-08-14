@@ -1,21 +1,22 @@
 .container {
-  width: 960px;
-  height: 960px;
-  /* background-color: red; */
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  background-color: red;
   display: grid;
+  /* aspect-ratio: 1 / 1; */
   grid-template-columns: repeat(16, 1fr);
-  justify-items: center;
-  align-items: center;
-  gap: 0px;
+  /* justify-items: center; */
+  /* align-items: center; */
 }
 
 .grid-divs {
-  background-color: blue;
-  height: 60px;
-  width: 60px;
-  margin: 0px;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  /* aspect-ratio: 1 / 1; */
 }
 
 .pink {
-  background-color: pink;
+  background-color: black;
 }
