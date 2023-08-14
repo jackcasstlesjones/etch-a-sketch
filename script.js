@@ -1,6 +1,5 @@
 const container = document.querySelector(".container");
 const button = document.getElementById("button");
-let userSquares;
 
 button.addEventListener("click", function () {
   const userNumber = prompt("How many squares would you like?");
@@ -8,22 +7,24 @@ button.addEventListener("click", function () {
     return alert("Please pick a number lower than 100");
   }
   container.innerHTML = "";
-  console.log(userNumber * userNumber);
-  createDivs(userNumber * userNumber);
+  createDivs(userNumber);
 });
 
 const createDivs = function (divsNumber) {
   for (let i = 1; i <= divsNumber; i++) {
-    console.log(divsNumber);
-    let newDiv = document.createElement("div");
-    container.appendChild(newDiv);
-    newDiv.classList.add("grid-divs");
-    newDiv.style.height = "";
+    const divColumn = document.createElement("div");
+    container.appendChild(divColumn);
+    divColumn.classList.add("div-columns");
 
-    newDiv.addEventListener("mouseover", function () {
-      newDiv.classList.add("pink");
-    });
+    for (let i = 1; i <= divsNumber; i++) {
+      const newDiv = document.createElement("div");
+      divColumn.appendChild(newDiv);
+      newDiv.classList.add("grid-divs");
+      newDiv.addEventListener("mouseover", function () {
+        newDiv.classList.add("filled");
+      });
+    }
   }
 };
 
-createDivs(256);
+createDivs(16);

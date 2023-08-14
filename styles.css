@@ -1,22 +1,43 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  fs
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .container {
-  border: 1px solid black;
-  width: 400px;
-  height: 400px;
-  background-color: red;
-  display: grid;
-  /* aspect-ratio: 1 / 1; */
-  grid-template-columns: repeat(16, 1fr);
-  /* justify-items: center; */
-  /* align-items: center; */
+  border: 5px solid black;
+  margin: auto;
+  width: 800px;
+  height: 800px;
+  display: flex;
+}
+
+.div-columns {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+}
+
+#button {
+  margin: auto;
+  padding: 20px;
+  font-size: 24px;
 }
 
 .grid-divs {
   background-color: white;
   height: 100%;
   width: 100%;
-  /* aspect-ratio: 1 / 1; */
 }
 
-.pink {
+.filled {
   background-color: black;
 }
